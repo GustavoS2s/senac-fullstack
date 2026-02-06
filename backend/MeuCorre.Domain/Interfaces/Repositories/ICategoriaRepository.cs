@@ -19,6 +19,10 @@ namespace MeuCorre.Domain.Interfaces.Repositories
         //nome e tipo para o usuário informado
         //nome e tipo para o usuário informado
         Task<bool> NomeExisteParaUsuarioAsync(string nome, TipoTransacao tipo, Guid usuarioId);
+        /// <summary>
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns></returns>
 
         //Adiciona uma nova categoria no banco de dados
         Task AdicionarAsync(Categoria categoria);
