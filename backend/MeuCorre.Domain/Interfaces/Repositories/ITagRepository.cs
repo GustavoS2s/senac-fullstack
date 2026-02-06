@@ -23,7 +23,7 @@ namespace MeuCorre.Domain.Interfaces.Repositories
         //Verifica se já existe uma Tag com o mesmo
         //nome e tipo para o usuário informado
         //nome e tipo para o usuário informado
-        Task<bool> NomeExisteParaUsuarioAsync(string nome, TipoTransacao tipo, Guid usuarioId);
+        Task<bool> NomeExisteParaUsuarioAsync(string nome, Guid usuarioId);
         /// <summary>
         /// </summary>
         /// <param name="tag"></param>
