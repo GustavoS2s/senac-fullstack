@@ -96,25 +96,5 @@ namespace MeuCorre.Controllers
                 return BadRequest(mensagem);
             }
         }
-
-
-        [HttpGet]
-        public async Task<IActionResult> ObtertagsPorUsuario([FromQuery] ListarTodasTagsQuery query)
-        {
-            var tags = await _mediator.Send(query);
-            return Ok(tags);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> ObtertagPorId(Guid id)
-        {
-            var query = new ObterTagQuery() { tagId = id };
-            var tag = await _mediator.Send(query);
-            if (tag == null)
-            {
-                return NotFound("tag não encontrada");
-            }
-            return Ok(tag);
-        }
     }
 }
